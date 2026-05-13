@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cream text-navy font-sans;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer components {
+  .poem-line {
+    @apply font-serif text-lg leading-8 text-navy;
+  }
+  .annotated {
+    @apply border-b-2 border-blue cursor-pointer bg-blue/5;
+  }
+  .step-arrow {
+    clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 50%, calc(100% - 16px) 100%, 0 100%);
+  }
+  .pill {
+    @apply inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full;
+  }
+  .card {
+    @apply bg-white rounded-xl border border-warm shadow-sm hover:shadow-md transition-shadow;
+  }
+  .section-fade {
+    animation: fadeUp 0.3s ease;
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
